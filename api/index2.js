@@ -1,9 +1,17 @@
 module.exports = (req, res) => {
-  function npmls() {
-    require('child_process').exec('npm install --save-dev webpack', function(err, stdout, stderr) {
-      if (err) return alert(err)
-      res.status(200).send(stdout + stderr + ' khh');
-    });
-  }
-  npmls();
+	var npm = require('npm');
+	npm.load(function(err) {
+		// handle errors
+
+		// install module ffi
+ 		npm.commands.install(['ffi'], function(er, data) {
+ 	       		// log errors or data
+			res.status(200).send('failed' + er + data);
+		});
+ 	});
+
+	npm.on('log', function(message) {
+		// log installation progress
+		res.status(200).send(message);
+ 	});
 }

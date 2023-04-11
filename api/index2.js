@@ -1,20 +1,8 @@
 module.exports = (req, res) => {
-
-	var npm = require('npm'); /*
-	npm.load(function(err) {
-		// handle errors
-
-		// install module ffi
- 		npm.commands.install(['ffi'], function(er, data) {
- 	       		// log errors or data
-			res.status(200).send('failed' + er + data);
-		});
- 	});
-
-	npm.on('log', function(message) {
-		// log installation progress
-		res.status(200).send(message);
- 	});
-*/
-res.status(200).send('Helllllo');
+	var require('child_process').exec('npm ls --json',
+	res.status(200).send('Helllllo');
+require('child_process').exec('npm ls --json', function(err, stdout, stderr) {
+    if (err) return cb(err)
+    cb(null, JSON.parse(stdout));
+  });
 }

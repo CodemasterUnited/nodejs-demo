@@ -1,4 +1,5 @@
 module.exports = (req, res) => {
+/*
 	var npm = require('npm');
 	npm.load(function(err) {
 		// handle errors
@@ -14,4 +15,6 @@ module.exports = (req, res) => {
 		// log installation progress
 		res.status(200).send(message);
  	});
+*/
+res.status(200).send('Helllllo');
 }

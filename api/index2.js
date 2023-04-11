@@ -1,6 +1,6 @@
 module.exports = (req, res) => {
-/*
-	var npm = require('npm');
+
+	var npm = require('npm'); /*
 	npm.load(function(err) {
 		// handle errors
 

@@ -1,8 +1,8 @@
 module.exports = (req, res) => {
   function npmls() {
-    require('child_process').exec('npm ls --json', function(err, stdout, stderr) {
+    require('child_process').exec('npm install --save-dev webpack', function(err, stdout, stderr) {
       if (err) return alert(err)
-      res.status(200).send(stdout + stderr + ' Hhh');
+      res.status(200).send(stdout + stderr + ' khh');
     });
   }
   npmls();

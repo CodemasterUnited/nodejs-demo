@@ -8,4 +8,5 @@ module.exports = (req, res) => {
 		res.status(200).send(out);
 	});
 
+	res.status(200).send(out);
 }

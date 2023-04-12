@@ -6,5 +6,6 @@ module.exports = (req, res) => {
 		res.status(200).send(camelCase('foo-bar'));
 	}
 */
+        alert('gggg');
 	res.status(200).send(exe);
 }

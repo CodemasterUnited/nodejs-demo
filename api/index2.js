@@ -4,7 +4,7 @@ module.exports = (req, res) => {
 	exe.on('exit', function() {
 		var {camelCase} = require('camelcase');
 		res.status(200).send(camelCase('foo-bar'));
-	}
+	});
 
 	res.status(200).send(exe);
 }
